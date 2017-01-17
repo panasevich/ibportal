@@ -1,0 +1,94 @@
+.page-header {
+  ._vertical();
+  background: @theme-color;
+  height: 85px;
+  padding: 0 30px;
+  &_logo {
+    display: inline-block;
+    a {
+      display: inline-block;
+      height: 100%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  &_nav {
+    list-style: none;
+  }
+  &_nav-item {
+    ._vertical();
+    height: 85px;
+    float: left;
+    font-size: 0;
+    .btn {
+      text-transform: uppercase;
+      margin-left: 15px;
+    }
+  }
+  &_nav-link {
+    ._vertical();
+    color: @nav-color;
+    font-weight: 700;
+    padding: 0 16px;
+    font-size: 13px;
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    &:hover,
+    &:active,
+    &:focus {
+      background: #243342;
+      color: @nav-color;
+      text-decoration: none;
+    }
+    &_is-setting {
+      font-size: 30px;
+      margin: 0 4px 5px 7px;
+      padding: 0 28px;
+      &:before {
+        margin-left: -0.25em;
+      }
+    }
+  }
+  &_user-image {
+    display: inline-block;
+    vertical-align: middle;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: @user-image-bg;
+    margin: 0 5px 4px 11px;
+    position: relative;
+    img {
+      position: absolute;
+      z-index: 2;
+    }
+  }
+  &_user-false {
+
+  }
+  &_username {
+    font-size: 15px;
+    font-weight: 500;
+    color: @username-color;
+  }
+  &_user-caret {
+    color: @username-color;
+    font-size: 4px;
+  }
+}
+
+@media (max-width: 900px) {
+  .page-header {
+    &_logo {
+      width: 150px;
+    }
+    &_nav-link {
+      padding: 0 10px;
+    }
+    &_username {
+      display: none;
+    }
+  }
+}

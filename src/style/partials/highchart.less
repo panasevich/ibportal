@@ -1,0 +1,39 @@
+/* Define the stop colors */
+#gradient-0 stop {
+  stop-color: @theme-color;
+}
+#gradient-0 stop[offset="0"] {
+  stop-opacity: 0.5;
+}
+#gradient-0 stop[offset="1"] {
+  stop-opacity: 0.1
+}
+#gradient-1 stop {
+  stop-color: @theme-color;
+}
+#gradient-1 stop[offset="0"] {
+  stop-opacity: 0;
+}
+#gradient-1 stop[offset="1"] {
+  stop-opacity: 0
+}
+/* Apply the gradients */
+
+
+.highcharts-color-0 .highcharts-area {
+  fill-opacity: 1;
+  fill: url(#gradient-1);
+}
+
+
+.chart {
+  &__chart {
+    .highcharts-color-0 .highcharts-area {
+      fill-opacity: 1;
+      fill: url(#gradient-0);
+    }
+  }
+}
+.highcharts-credits {
+  display: none !important;
+}

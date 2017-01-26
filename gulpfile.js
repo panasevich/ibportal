@@ -19,19 +19,22 @@ var path = {
         html: 'build/',
         css: 'build/css/',
         img: 'build/img/',
-        fonts: 'build/fonts/'
+        fonts: 'build/fonts/',
+        js: 'build/js/'
     },
     src: {
         html: 'src/*.html',
         style: 'src/style/main.less',
         img: 'src/img/**/*.*',
-        fonts: 'src/fonts/**/*.*'
+        fonts: 'src/fonts/**/*.*',
+        js: 'src/js/main.js'
     },
     watch: {
         html: 'src/**/*.html',
         style: 'src/style/**/*.less',
         img: 'src/img/**/*.*',
-        fonts: 'src/fonts/**/*.*'
+        fonts: 'src/fonts/**/*.*',
+        js: 'src/js/**/*.js'
     },
     clean: './build'
 };
@@ -61,6 +64,13 @@ gulp.task('html:build', function () {
         .pipe(reload({stream: true}));
 });
 
+gulp.task('js:build', function () {
+    gulp.src(path.src.js)
+        .pipe(rigger())
+        .pipe(gulp.dest(path.build.js))
+        .pipe(reload({stream: true}));
+});
+
 gulp.task('style:build', function () {
     gulp.src(path.src.style) 
         .pipe(sourcemaps.init())
@@ -71,7 +81,6 @@ gulp.task('style:build', function () {
             errLogToConsole: true
         }))
         .pipe(prefixer())
-        .pipe(cssmin())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
@@ -96,6 +105,7 @@ gulp.task('fonts:build', function() {
 
 gulp.task('build', [
     'html:build',
+    'js:build',
     'style:build',
     'fonts:build',
     'image:build'
@@ -114,6 +124,9 @@ gulp.task('watch', function(){
     });
     watch([path.watch.fonts], function(event, cb) {
         gulp.start('fonts:build');
+    });
+    watch([path.watch.js], function(event, cb) {
+        gulp.start('js:build');
     });
 });
 

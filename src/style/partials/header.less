@@ -1,94 +1,63 @@
-.page-header {
-  ._vertical();
-  background: @theme-color;
-  height: 85px;
-  padding: 0 30px;
-  &_logo {
-    display: inline-block;
-    a {
-      display: inline-block;
-      height: 100%;
-    }
-    img {
-      width: 100%;
-    }
+.header {
+  ._clearfix();
+  padding: 17px 40px;
+  border-bottom: 1px solid @border;
+  background: @header-bg;
+  .container {
+    display: flex;
+    align-items: center;
   }
-  &_nav {
-    list-style: none;
-  }
-  &_nav-item {
-    ._vertical();
-    height: 85px;
-    float: left;
+  &__logo {
     font-size: 0;
-    .btn {
-      text-transform: uppercase;
-      margin-left: 15px;
-    }
-  }
-  &_nav-link {
-    ._vertical();
-    color: @nav-color;
-    font-weight: 700;
-    padding: 0 16px;
-    font-size: 13px;
-    display: inline-block;
-    height: 100%;
-    text-align: center;
-    &:hover,
-    &:active,
-    &:focus {
-      background: #243342;
-      color: @nav-color;
-      text-decoration: none;
-    }
-    &_is-setting {
-      font-size: 30px;
-      margin: 0 4px 5px 7px;
-      padding: 0 28px;
-      &:before {
-        margin-left: -0.25em;
-      }
-    }
-  }
-  &_user-image {
     display: inline-block;
     vertical-align: middle;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background: @user-image-bg;
-    margin: 0 5px 4px 11px;
-    position: relative;
-    img {
-      position: absolute;
-      z-index: 2;
+    margin-right: 40px;
+    svg {
+      width: 165px;
     }
   }
-  &_user-false {
-
-  }
-  &_username {
-    font-size: 15px;
-    font-weight: 500;
-    color: @username-color;
-  }
-  &_user-caret {
-    color: @username-color;
-    font-size: 4px;
-  }
-}
-
-@media (max-width: 900px) {
-  .page-header {
-    &_logo {
-      width: 150px;
+  &__nav {
+    display: inline-block;
+    font-size: 0;
+    vertical-align: middle;
+    &-item {
+      display: inline-block;
+      font-size: @basic-size;
+      text-transform: uppercase;
+      margin-left: 50px;
+      &:first-child {
+        margin-left: 0;
+      }
     }
-    &_nav-link {
-      padding: 0 10px;
+    &-link {
+      font-weight: 700;
     }
-    &_username {
-      display: none;
+  }
+  &__bill {
+    font-weight: bold;
+    border: 2px solid @theme-color;
+    border-radius: @radius;
+    line-height: 32px;
+    margin-right: 30px;
+    min-width: 140px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &__profile {
+    color: @theme-color;
+    font-weight: bold;
+    display: inline-block;
+    max-width: 130px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    &-block {
+      margin-left: auto;
+    }
+    i {
+      color: @main-color;
+      font-size: 7px;
+      margin-left: 2px;
     }
   }
 }

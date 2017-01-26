@@ -1,0 +1,137 @@
+//big button
+.btn-big {
+  outline: none;
+  border: 0;
+  background: @btn-big-bg;
+  font: @btn-big-font;
+  padding: 0 16px;
+  line-height: 36px;
+  text-transform: uppercase;
+  border-radius: @radius;
+  box-shadow: 0 3px 21px 0 @btn-big-shadow;
+  cursor: pointer;
+  transition: all 0.3s;
+  &.disabled {
+    background: @btn-big-disabled;
+    cursor: default;
+    box-shadow: none;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+  &:hover {
+    box-shadow: 0 7px 34px 0 @btn-big-shadow;
+  }
+}
+//big button
+
+//empty button start
+.btn-empty {
+  outline: none;
+  border: 1px solid fade(@btn-empty-border, 30%);
+  background: 0;
+  font: @btn-empty-font;
+  padding: 0 10px;
+  line-height: 32px;
+  color: @btn-empty-color;
+  border-radius: @radius;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  &.disabled {
+    border-color: @btn-empty-border-disable;
+    color: @btn-empty-color-disable;
+    cursor: default;
+    .num {
+      background: @btn-empty-bg-disable;
+    }
+    &:focus {
+      background: 0;
+    }
+    &:hover {
+      border-color: @btn-empty-border-disable;
+    }
+  }
+  &:active {
+    background: @btn-big-bg-active;
+  }
+  &:hover {
+    border-color: @btn-empty-border;
+  }
+}
+//empty button end
+
+//notificator start
+.num {
+  position: absolute;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  right: -18px;
+  top: -4px;
+  background: @num-bg;
+  color: @num-color;
+  text-align: center;
+  font: @num-font;
+}
+//notificator end
+
+//round btn start
+.btn-round {
+  outline: none;
+  border: 1px solid @btn-round-border;
+  background: @btn-round-bg;
+  font: @btn-round-font;
+  padding: 0 10px;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  color: @btn-round-color-inactive;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  border-radius: 50%;
+  vertical-align: top;
+  &.active {
+    color: @btn-round-color;
+  }
+  &.disabled {
+    cursor: default;
+    color: @btn-round-color-disable;
+    &:active {
+      border: 1px solid @btn-round-border;
+    }
+    &:hover {
+      color: @btn-round-color-disable;
+    }
+  }
+  &.inactive {
+    color: @btn-round-color-inactive;
+    &:hover {
+      color: @btn-round-color-inactive;
+    }
+    &:active {
+      border: 1px solid @btn-round-border;
+    }
+  }
+  &:hover {
+    color: fade(@btn-round-color, 50%);
+  }
+  &:active {
+    border-color: @btn-round-border-active;
+    color: @btn-round-color;
+  }
+  .icon-graph {
+    font-size: 15px;
+    margin-top: 3px;
+  }
+  .icon-candels {
+    font-size: 22px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5px;
+    margin: auto;
+  }
+}
+//round btn end

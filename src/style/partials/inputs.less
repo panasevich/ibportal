@@ -1,0 +1,32 @@
+input[type="text"],
+input[type="password"] {
+  height: 36px;
+  line-height: 36px;
+  border-radius: @radius;
+  background: @input-bg;
+  outline: none;
+  font: @input-font;
+  border: 1px solid @input-border;
+  color: @input-color;
+  padding: 0 20px;
+  box-sizing: border-box;
+  &.disabled {
+    background: @input-bg-disable;
+    border-color: @input-border-disable;
+    color: @input-color-disable;
+    &:hover {
+      border-color: @input-border-disable;
+    }
+    &:focus {
+      box-shadow: none;
+      border-color: @input-border-disable;
+    }
+  }
+  &:hover {
+    border-color: fade(@input-border, 50%);
+  }
+  &:focus {
+    box-shadow: 0 1px 13px 0 @input-shadow;
+    border-color: @input-border;
+  }
+}

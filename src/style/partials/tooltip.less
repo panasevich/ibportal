@@ -1,0 +1,107 @@
+.tooltip {
+  background: @tooltip-bg;
+  border-radius: @radius;
+  padding: 15px;
+  position: absolute;
+  display: none;
+  color: @main-color;
+  cursor: default;
+  &.active {
+    display: block;
+  }
+  &.small {
+    padding: 10px 15px;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+  }
+  &-top_right {
+    &:before {
+      border-bottom-color: @tooltip-bg;
+      bottom: 100%;
+      right: 10px;
+    }
+  }
+  &-top_left {
+    &:before {
+      border-bottom-color: @tooltip-bg;
+      bottom: 100%;
+      left: 10px;
+    }
+  }
+  &-top_center {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    margin-top: 16px;
+    &:before {
+      border-bottom-color: @tooltip-bg;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: auto;
+    }
+  }
+  &__label {
+    overflow: hidden;
+    text-align: right;
+    color: @main-color;
+    line-height: 27px;
+    font-size: 14px;
+  }
+  &__row {
+    margin-top: 21px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  &__alt {
+    cursor: default;
+    background: @tooltip-bg-alt;
+    border: 1px solid @tooltip-border-alt;
+    border-radius: @radius;
+    padding: 10px 28px 10px 10px;
+    position: absolute;
+    display: none;
+    color: @tooltip-color-alt;
+    font-size: 14px;
+    .icon-bottom-drop,
+    .icon-top-drop {
+      font-size: 8px;
+      position: absolute;
+      right: 9px;
+      top: 6px;
+      color: @tooltip-color-alt;
+    }
+    .icon-bottom-drop {
+      top: auto;
+      bottom: 6px;
+    }
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      border: 7px solid transparent;
+    }
+    &-left_center {
+      left: 100%;
+      margin-left: 16px;
+      &:before,
+      &:after {
+        right: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        border-right-color: @tooltip-border-alt;
+      }
+      &:after {
+        border-right-color: @tooltip-bg-alt;
+        margin-right: -1px;
+      }
+    }
+    &.active {
+      display: block;
+    }
+  }
+}

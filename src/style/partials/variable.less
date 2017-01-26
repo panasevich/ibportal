@@ -1,96 +1,174 @@
-@body-bg: #f2f4f9;
-@hightlight: #e8b35d;
-@hightlight-alt: #ac5452;
-@btn-color: #fff;
-@btn-color-alt: #acbdc6;
-@disabled-btn: #84b7d9;
+@body-bg: #000;
+@main-color: #fff;
 
-@icon-color: #ababab;
+@theme-color: #ffcc00;
+@border: #3f3e3e;
 
-@muted: #7f99ab;
+@basic-size: 12px;
+@radius: 5px;
 
-@input-bg: #fff;
-@input-border: #dedede;
-@input-border-focus: #84b7d9;
-@input-border-error: #e0b4b4;
-@input-bg-error: #fff6f6;
+@settings-border: @theme-color;
+@settings-color: @theme-color;
 
-@input-disable-border: #f0f0f0;
-@input-disable-color: #8aa3b0;
+@page-block-bg: #3f3e3e;
 
-@error-color: #973a38;
-@error-bg: #fcf7fd;
-@error-border: #d5bcd8;
+@color-2: #ff0000;
+@color-3: #3aaa35;
 
-@success-bg: #fcfff6;
-@success-color: #2c662c;
-@success-border: #a2c293;
-@success-icon: #45a448;
-//header
-@theme-color: #2b3d4f;
-@nav-color: #eec47d;
-@user-image-bg: #eaecee;
-@username-color: #ddd;
+//notificator
+@num-bg: @theme-color;
+@num-color: #000;
+@num-font: 800 12px/24px "Lato";
+
+//big buttons variables start
+//big btn
+@btn-big-bg: @theme-color;
+@btn-big-bg-active: fade(@theme-color, 10%);
+@btn-big-shadow: @theme-color;
+@btn-big-font: 800 18px "Lato";
+@btn-big-disabled: #594700;
+
+//empty btn
+@btn-empty-border: @theme-color;
+@btn-empty-border-disable: #594700;
+@btn-empty-color-disable: #594700;
+@btn-empty-bg-disable: #594700;
+@btn-empty-color: @theme-color;
+@btn-empty-font: 700 18px "Lato";
+
+//round-btn
+@btn-round-bg: #292828;
+@btn-round-border: #292828;
+@btn-round-border-active: @theme-color;;
+@btn-round-color: @theme-color;
+@btn-round-color-inactive: fade(#fff, 30%);
+@btn-round-color-disable: #000;
+@btn-round-font: 400 12px/36px "Lato";
+//big buttons variables end
+
+//inputs vars start
+@input-bg: fade(@theme-color, 15%);
+@input-bg-disable: #0d0b00;
+@input-border-disable: fade(@theme-color, 15%);
+@input-color-disable: #333;
+@input-border: @theme-color;
+@input-color: #fff;
+@input-color-2: #929292;
+@input-font: 400 14px/36px "Lato";
+@input-shadow: @theme-color;
+//inputs vars end
+
+//dropdown vars start
+@dropdown-menu-bg: #464646;
+@dropdown-menu-bg-hover: #000;
+@dropdown-menu-color: @main-color;
+@dropdown-menu-color-hover: @theme-color;
+@dropdown-shadow: fade(#909090, 50%);
+//dropdown vars end
+
+//switcher start
+@switcher-border: #000;
+@switcher-bg: #3f3e3e;
+@switcher-color: fade(#fff, 30%);
+@switcher-active-bg: #262525;
+@switcher-active-color: @theme-color;
+@switcher-shadow: fade(@switcher-border,55%);
+//switcher end
+
+//tooltip start
+@tooltip-bg: #464646;
+@tooltip-bg-alt: #271f01;
+@tooltip-border-alt: @theme-color;
+@tooltip-color-alt: @theme-color;
+//tooltip end
+
+//charts start
+@chart-bg: transparent;
+@chart-gradient-start: #594700;
+@chart-gradient-stop: #1d1804;
+@chart-border: #808080;
+@chart-mover-item-color: #000;
+@mover-line: #fff;
+@mover-border: @theme-color;
+@mover-color: @theme-color;
+//charts end
+
+//table start
+@table-border: #2c2b2b;
+@trading-prop-bg: #323232;
+//table end
+
+//pagination start
+@pagination-border-disabled: #323232;
+//pagination end
+
+//footer start
+@footer-bg: #141414;
+//footer end
+
+//header start
+@header-bg: transparent;
+@panel-bg: transparent;
+@panel-sep: #fff;
+@panel-color: #fff;
+@panel-border: @border;
+@panel-number: @theme-color;
 //header end
 
-//sidebar
-@sidebar-bg: #fff;
-@sidebar-link-color: #acbdc7;
-@sidebar-link-hover-bg: #f8f9fc;
-@sidebar-link-hover-color: #2b3d4e;
-@sidebar-disk-border: #f2f2f2;
-@sidebar-disk-color: #819bab;
-@sidebar-disk-progress: #d8dded;
-@sidebar-disk-progress-inner: #819bab;
-@sidebar-disk-progress-inner-color: #fff;
-//sidebar end
+/////////////////////////////white scheme////////////////////////////////////////////////
 
-//product table
-@product-table-td-bg: #fff;
-@product-table-th-bg: #f8f9fc;
-@product-table-th-icon: #c3c4c6;
-@product-table-th-color: @theme-color;
-@product-table-border-color: #f2f2f3;
-@product-table-icon-color: #4c6c8c;
-@product-table-question-bg: #f0f2f9;
-@product-table-day-color: #809aab;
-@product-table-disabled-color: #d8e0e5;
-@product-table-mail: #4d6c8c;
-//product table end
+@settings-border: #000;
+@settings-color: #000;
 
-//sign
-@sign-bg: #fff;
-@sign-shadow: #000;
-@sign-forgot: #4e6c8c;
-//sign end
+//inputs vars start
+@input-bg: #d9d9d9;
+@input-bg-disable: #0d0b00;
+@input-border-disable: fade(@theme-color, 15%);
+@input-color-disable: #333;
+@input-border: #000;
+@input-color: #000;
+@input-shadow: #000;
+//inputs vars end
 
-//modal
-@modal-overlay: #f2f4f9;
-@modal-bg: #fff;
-@modal-shadow: #000;
-@modal-header-border: #eee;
-@modal-link-color: #4c6c8c;
-@modal-close-color: #ababab;
-//modal end
+//empty btn start
+@btn-empty-border: #000;
+@btn-empty-border-disable: #ccc;
+@btn-empty-color-disable: #ccc;
+@btn-empty-bg-disable: #ccc;
+@btn-empty-color: #000;
+//empty btn end
 
-//tabs
-@tab-bg: #fff;
-@tab-border: #f2f2f4;
-@tab-link: #acbdc5;
-@tab-shadow: #acbdc5;
-@tab-label: #2b3d4c;
-@tab-label-alt: #9e9e9e;
-//tabs end
+//round-btn
+@btn-round-bg: #ececec;
+@btn-round-border: #ececec;
+@btn-round-border-active: #000;
+@btn-round-color: #000;
+@btn-round-color-inactive: #929292;
+@btn-round-color-disable: #fff;
+//big buttons variables end
 
-//password
-@pass-attention-border: #c9ba9b;
-@pass-attention-bg: #fffaf3;
-@pass-attention-color: #70582b;
-@pass-success-color: #2c662c;
-@pass-success-border: #a3c293;
-@pass-success-bg: #fcfff5;
-//password end
+//tooltip start
+@tooltip-bg-alt: #fff7d9;
+@tooltip-border-alt: @theme-color;
+@tooltip-color-alt: #000;
+//tooltip end
 
-//footer
-@footer-color: #8aa3b0;
-//footer end
+//header start
+@header-bg: #000;
+@panel-bg: #fff;
+@panel-sep: #929292;
+@panel-color: #000;
+@panel-border: #ccc;
+@panel-number: #000;
+//header end
+
+//charts start
+@chart-bg: #fff;
+@chart-gradient-start: #594700;
+@chart-gradient-stop: #1d1804;
+@chart-border: #808080;
+@chart-mover-item-color: #000;
+@mover-line: @theme-color;
+@mover-border: #000;
+@mover-color: #000;
+//charts end
